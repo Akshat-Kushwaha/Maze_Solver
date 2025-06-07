@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Solver Bot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Maze Solver Bot</h1>
+    
+    <div class="controls">
+        <div class="tool-buttons">
+            <button id="wall-btn" class="active">Draw Walls</button>
+            <button id="path-btn">Draw Paths</button>
+            <button id="start-btn">Set Start</button>
+            <button id="end-btn">Set End</button>
+        </div>
+        <div class="action-buttons">
+            <button id="clear-btn">Clear Maze</button>
+            <button id="solve-btn">Solve Maze</button>
+            <button id="reset-bot-btn" disabled>Reset Bot</button>
+        </div>
+    </div>
+
+    <div class="maze-size-control">
+        <label for="maze-size">Maze Size:</label>
+        <select id="maze-size">
+            <option value="10">10x10</option>
+            <option value="15" selected>15x15</option>
+            <option value="20">20x20</option>
+            <option value="25">25x25</option>
+            <option value="30">30x30</option>
+        </select>
+        <button id="apply-size-btn">Apply Size</button>
+    </div>
+
+    <div class="status-bar">
+        <span id="current-tool">Current Tool: Draw Walls</span>
+        <span id="maze-status">Status: Ready</span>
+    </div>
+
+    <div class="maze-container-wrapper">
+        <img id="maze-bot" src="bot.png" alt="Maze solving bot">
+        <div class="maze-container" id="maze"></div>
+    </div>
+
+    <div class="instructions">
+        <h3>Instructions:</h3>
+        <p>1. Click "Draw Walls" or "Draw Paths" then click on cells to edit</p>
+        <p>2. Click "Set Start" or "Set End" then click a cell to place them</p>
+        <p>3. Click "Solve Maze" to see if there's a solution (highlighted in yellow)</p>
+        <p>4. Use "Reset Bot" to return the bot to the start position</p>
+        <p>5. Use "Clear Maze" to start over</p>
+        <p>6. Select a new size and click "Apply Size" to change maze dimensions</p>
+    </div>
+
+    <div class="keyboard-shortcuts">
+        <h3>Keyboard Shortcuts:</h3>
+        <p>W - Draw Walls</p>
+        <p>P - Draw Paths</p>
+        <p>S - Set Start</p>
+        <p>E - Set End</p>
+        <p>Space - Solve Maze</p>
+        <p>R - Reset Bot</p>
+        <p>C - Clear Maze</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

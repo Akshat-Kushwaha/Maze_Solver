@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.tool-buttons, .action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button.active {
+    background-color: #2196F3;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.maze-container-wrapper {
+    position: relative;
+    margin: 20px auto;
+    display: inline-block;
+}
+
+.maze-container {
+    display: inline-block;
+    border: 3px solid #333;
+    background-color: #fff;
+    position: relative;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+.cell.wall {
+    background-color: #333;
+}
+
+.cell.path {
+    background-color: #fff;
+}
+
+.cell.start {
+    background-color: #4CAF50;
+}
+
+.cell.end {
+    background-color: #f44336;
+}
+
+.cell.solution {
+    background-color: #ffeb3b;
+}
+
+#maze-bot {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease;
+    z-index: 100;
+    pointer-events: none;
+    display: none;
+    transform-origin: center center;
+}
+
+.facing-right {
+    transform: translate(var(--x), var(--y)) rotate(0deg);
+}
+
+.facing-left {
+    transform: translate(var(--x), var(--y)) rotate(180deg);
+}
+
+.facing-up {
+    transform: translate(var(--x), var(--y)) rotate(-90deg);
+}
+
+.facing-down {
+    transform: translate(var(--x), var(--y)) rotate(90deg);
+}
+
+.instructions, .keyboard-shortcuts {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.instructions h3, .keyboard-shortcuts h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.instructions p, .keyboard-shortcuts p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.row {
+    display: flex;
+    white-space: nowrap;
+}
+
+.maze-size-control {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.maze-size-control label {
+    font-weight: bold;
+    color: #333;
+}
+
+.maze-size-control select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.maze-size-control button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.maze-size-control button:hover {
+    background-color: #45a049;
+}
