@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let endPos = { x: mazeSize - 1, y: mazeSize - 2 };
     let isSolving = false;
     
-    // Initialize UI elements
+    
     const wallBtn = document.getElementById('wall-btn');
     const pathBtn = document.getElementById('path-btn');
     const startBtn = document.getElementById('start-btn');
